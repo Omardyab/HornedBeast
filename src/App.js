@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from './componenet/Footer';
 import Header from './componenet/header';
-// import Main from './componenet/main.js';
+import Main from './componenet/Main.js';
 
 
 class App extends React.Component{
@@ -10,7 +10,7 @@ render(){
       
     <div>
       <Header/> 
-     
+      <Main/>
       <Footer/>
 
     </div>
