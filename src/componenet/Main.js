@@ -1,10 +1,12 @@
 import React from 'react';
+import Horned from './componenet/Horned';
 
 
-class Main extends React.Component{
+class M extends React.Component{
 render(){
     return(
-      <h1>Welcome </h1>
+      <h1>Welcome omar </h1>
+      
         );
 }
 }
