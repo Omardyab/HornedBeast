@@ -11,9 +11,8 @@ class Horned extends React.Component{
     }
   }
   HornedPluseone=()=> {
-    this.state({
-      HornedNum: this.state.HornedNum+1
-
+    this.setstate({
+    HornedNum: this.state.HornedNum+1
     })
   }
 render(){
@@ -22,8 +21,8 @@ render(){
       {/* <h2 className='title'>Title : {this.props.title}</h2>
       <img src={this.props.url} alt={this.props.description} title={this.props.title}></img>
       <p className='desc'>Description:{this.props.description}</p> */}
-    <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+ <Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" onClick={this.HornedPluseone} />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>(title is add here )
     <Card.Text>
@@ -34,9 +33,9 @@ render(){
     </Card.Text>
    
   </Card.Body>
-</Card>
+ </Card>
       
-      </div>
+</div>
       
         );
 }
