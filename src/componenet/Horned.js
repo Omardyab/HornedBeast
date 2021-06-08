@@ -7,11 +7,11 @@ class Horned extends React.Component{
   {
     super(props);
     this.state={
-      HornedVote : 0
+      HornedNum : 0
     }
   }
   HornedPluseone=()=> {
-    this.setstate({
+    this.setState({
     HornedNum: this.state.HornedNum+1
     })
   }
@@ -22,22 +22,20 @@ render(){
       <img src={this.props.url} alt={this.props.description} title={this.props.title}></img>
       <p className='desc'>Description:{this.props.description}</p> */}
  <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" onClick={this.HornedPluseone} />
+  <Card.Img variant="top" src={this.props.url} onClick={this.HornedPluseone} />
   <Card.Body>
-    <Card.Title>{this.props.title}</Card.Title>(title is add here )
+    <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
-    ❤️={this.state.HornedNum}(update the value of the votes)
+    ❤️={this.state.HornedNum}
     </Card.Text>
     <Card.Text>
-    {this.props.description}(update the des)
+    {this.props.description}
     </Card.Text>
-   
-  </Card.Body>
- </Card>
-      
+     </Card.Body>
+ </Card>      
 </div>
       
-        );
-}
+    )
+  }
 }
 export default Horned ;

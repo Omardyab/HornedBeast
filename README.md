@@ -1,3 +1,18 @@
+
+Lab 2 
+Number and name of feature: display images with voting functions
+Estimate of time needed to complete: 40min
+Start time: 2:10 pm 
+Finish time: 3:10 pm
+Actual time needed to complete: 60 min
+
+
+Number and name of feature: Allow users to vote for their favorite beast
+Estimate of time needed to complete: 60m in
+Start time: 3:30 pm
+Finish time: 4:50 pm
+Actual time needed to complete: 80 min
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
