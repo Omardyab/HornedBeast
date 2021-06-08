@@ -7,15 +7,12 @@ import Main from './componenet/Main.js';
 class App extends React.Component{
 render(){
     return(
-      
-    <div>
+      <div>
       <Header/> 
       <Main/>
       <Footer/>
-
     </div>
       )
 }
-
 }
 export default App;
