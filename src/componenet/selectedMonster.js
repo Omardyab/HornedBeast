@@ -25,7 +25,7 @@ render(){
             </Card.Text>
           </Card.Body>
           <ListGroup className="list-group-flush">
-            <ListGroupItem>Horns : {this.props.hornedNum}</ListGroupItem>
+            <ListGroupItem>Horns : {this.props.horn}</ListGroupItem>
           </ListGroup>
         </Card>
       </Modal.Body>
