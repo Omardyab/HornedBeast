@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
-import Horned from './componenet/Horned';
+import Horned from './Horned';
 // import Card from 'react-bootstrap/CardGroup';
 
 
