@@ -1,6 +1,5 @@
 import {React} from 'react';
 import Card from 'react-bootstrap/Card';
-import selectedMonster from './selectedMonster';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import 'bootstrap/dist/css/bootstrap.min.css';
