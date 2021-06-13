@@ -11,6 +11,7 @@ class Horned extends React.Component{
     super(props);
     this.state={
       HornedNum : 0
+      show:false
     }
   }
   HornedPluseone=()=> {
@@ -32,7 +33,7 @@ render(){
       <img src={this.props.url} alt={this.props.description} title={this.props.title}></img>
       <p className='desc'>Description:{this.props.description}</p> */}
  <Card style={{ width: '1rem' }}>
-  <Card.Img variant="top" src={this.props.image_url} onClick={this.HornedPluseone} alt={this.props.keyword} />
+  <Card.Img variant="top" onClick={this.HornedPluseone}src={this.props.image_url} onClick={this.HornedPluseone} alt={this.props.keyword} />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
@@ -42,21 +43,20 @@ render(){
     {this.props.description}
     </Card.Text>
      </Card.Body>
-     {/* <ListGroup className="list-group-flush">
+     <ListGroup className="list-group-flush">
             <ListGroupItem> Horns : {this.props.horns}</ListGroupItem>
-            <ListGroupItem> ❤️ :  {this.state.Votes}</ListGroupItem>
-          </ListGroup> */}
+            <ListGroupItem> ❤️ :  {this.state.HornedPluseone}</ListGroupItem>
+          </ListGroup>
  </Card> 
  
- {/* <selectedMonster
+ <selectedMonster
           show={this.state.show}
-          
-          title={this.props.title}
           CloseModal={this.CloseModal}
+          title={this.props.title}
           description={this.props.description}
           imageUrl={this.props.image_url}
           horns={this.props.horns}
-        />      */}
+        />     
 </div>
       
     )
