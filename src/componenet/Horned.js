@@ -10,7 +10,8 @@ class Horned extends React.Component{
   {
     super(props);
     this.state={
-      HornedNum : 0
+      HornedNum : 0,
+      show:false,
         }
   }
   HornedPluseone=()=> {
