@@ -25,6 +25,7 @@ class App extends React.Component{
         }
         console.log(Beastdata);
       })
+
       this.setState({
         selected :selectedbeast ,
         show:true
