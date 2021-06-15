@@ -26,7 +26,7 @@ class Horned extends React.Component{
 render(){
     return(
     
-  <Card style={{ width: '18rem' }} onClick={this.ShowModalMethod}>
+<Card style={{ width: '18rem' }} onClick={this.ShowModalMethod}>
   <Card.Img variant="top" onClick={this.HornedPluseone}
   src={this.props.imageUrl}  alt={this.props.keyword} />
   <Card.Body>
@@ -37,8 +37,14 @@ render(){
     <Card.Text>
     {this.props.description}
     </Card.Text>
-     </Card.Body>
-     </Card>       
+    <Card.Text>
+    {this.props.keyword}
+    </Card.Text>
+    <Card.Text>
+    Horns={this.props.horns}
+    </Card.Text>
+  </Card.Body>
+</Card>       
              
     )
   }
