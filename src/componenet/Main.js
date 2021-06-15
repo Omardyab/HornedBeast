@@ -1,12 +1,15 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Horned from './Horned';
-
+import CardGroup from 'react-bootstrap/CardGroup'
+// import CardGroup from 'react-bootstrap/';
 class Main extends React.Component{
 render(){
  return(
-      <div>
-                <Card>
+  <div>
+
+  <CardGroup>
+                  
                  {this.props.Beasts.map(beast => {
                   return (<Horned
                     imageUrl={beast.image_url}
@@ -18,9 +21,12 @@ render(){
                     )
                  })
                }  
-               </Card>
-      
-        </div>
+                  </CardGroup>
+
+
+</div>
+            
+     
 
       )
 }
