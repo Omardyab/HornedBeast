@@ -1,8 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-// import ListGroup from 'react-bootstrap/ListGroup';
-// import ListGroupItem from 'react-bootstrap/ListGroupItem';
+import Button from 'react-bootstrap/Button';
 class Horned extends React.Component{
   constructor(props){ 
     super(props)
@@ -25,8 +24,8 @@ class Horned extends React.Component{
   }
 render(){
     return(
-    
-<Card style={{ width: '18rem' }} onClick={this.ShowModalMethod}>
+    <div>
+<Card className='card-name'style={{ width: '18rem', height:'40rem' } } onClick={this.ShowModalMethod}>
   <Card.Img variant="top" onClick={this.HornedPluseone}
   src={this.props.imageUrl}  alt={this.props.keyword} />
   <Card.Body>
@@ -43,9 +42,10 @@ render(){
     <Card.Text>
     Horns={this.props.horns}
     </Card.Text>
+    <Button onClick={this.HornedPluseone} variant="info">Vote for this Horned Beast :) </Button>
   </Card.Body>
 </Card>       
-             
+</div> 
     )
   }
 }
