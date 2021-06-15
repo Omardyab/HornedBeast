@@ -1,13 +1,11 @@
-import {React} from 'react';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import ListGroupItem from 'react-bootstrap/ListGroupItem';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Card from 'react-bootstrap/Card';
+// import ListGroup from 'react-bootstrap/ListGroup';
+// import ListGroupItem from 'react-bootstrap/ListGroupItem';
 class Horned extends React.Component{
-  constructor(props)
-  {
-    super(props);
+  constructor(props){ 
+    super(props)
     this.state={
       HornedNum : 0,
       show:false,
@@ -17,22 +15,20 @@ class Horned extends React.Component{
     this.setState({
     HornedNum: this.state.HornedNum+1,
    })
-   this.ShowModal();
+  //  this.ShowModal();
   }
-  ShowModal = () => {
-    this.setState({ show: true });
-  };
+  ShowModalMethod = () => {
+    this.props.ShowModal(this.props.title)
+  }
   CloseModal = () => {
     this.setState({ show: false });
-  };
+  }
 render(){
     return(
-        <div>
-      {/* <h2 className='title'>Title : {this.props.title}</h2>
-      <img src={this.props.url} alt={this.props.description} title={this.props.title}></img>
-      <p className='desc'>Description:{this.props.description}</p> */}
- <Card style={{ width: '1rem' }}>
-  <Card.Img variant="top" onClick={this.HornedPluseone}src={this.props.image_url}  alt={this.props.keyword} />
+    
+  <Card style={{ width: '18rem' }} onClick={this.ShowModalMethod}>
+  <Card.Img variant="top" onClick={this.HornedPluseone}
+  src={this.props.imageUrl}  alt={this.props.keyword} />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
@@ -42,23 +38,24 @@ render(){
     {this.props.description}
     </Card.Text>
      </Card.Body>
-     <ListGroup className="list-group-flush">
-            <ListGroupItem> Horns : {this.props.horns}</ListGroupItem>
-            <ListGroupItem> ❤️ :  {this.state.HornedPluseone}</ListGroupItem>
-          </ListGroup>
- </Card> 
- 
- <selectedMonster
+     </Card>       
+             
+    )
+  }
+}
+export default Horned ;
+
+
+     // eslint-disable-next-line no-lone-blocks
+     {/* <h2 className='title'>Title : {this.props.title}</h2>
+      <img src={this.props.url} alt={this.props.description} title={this.props.title}></img>
+      <p className='desc'>Description:{this.props.description}</p> */}
+// eslint-disable-next-line no-lone-blocks
+{/* <SelectedBeasts 
           show={this.state.show}
           CloseModal={this.CloseModal}
           title={this.props.title}
           description={this.props.description}
           imageUrl={this.props.image_url}
           horns={this.props.horns}
-        />     
-</div>
-      
-    )
-  }
-}
-export default Horned ;
+        />      */}
