@@ -22,6 +22,12 @@ render(){
             <Card.Text>
               {this.props.Selected.description}
             </Card.Text>
+            <Card.Text>
+              {this.props.Selected.keyword}
+            </Card.Text>
+            <Card.Text>
+              {this.props.Selected.horns}
+            </Card.Text>
         </Modal.Body>
       <Modal.Footer>
         <Button onClick={this.handleclose} >Close</Button>
