@@ -1,10 +1,11 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './componenet/Footer';
 import Header from './componenet/header';
-import Main from './componenet/Main.js';
+import Main from './componenet/Main';
 import Beastdata from './componenet/data.json';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import SelectedBeasts from './componenet/SelectedBeasts';
+import Forms from './componenet/Forms'
 
 
 class App extends React.Component{
@@ -14,6 +15,7 @@ class App extends React.Component{
       Beastdata : Beastdata,
       show: false,
       selected: {}, 
+      Horns: 'ALL',
     }
   }
   ShowModal=(title) =>{
@@ -35,11 +37,13 @@ class App extends React.Component{
    CloseModal = () => {
     this.setState({ show: false });
    }
+  
     render(){
     return(
       <div>
       <Header/> 
-      <Main ShowModal={this.ShowModal} Beasts={this.state.Beastdata}/>
+      <Forms /> 
+      <Main ShowModal={this.ShowModal} Beasts={this.state.Beastdata}/>      
       <SelectedBeasts ShowModal={this.ShowModal} show={this.state.show} CloseModal={this.CloseModal} Selected={this.state.selected}/>
       <Footer/>
     </div>

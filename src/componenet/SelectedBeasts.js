@@ -9,8 +9,8 @@ class selectedMonster extends React.Component{
   }
 render(){
     return(
-              <Modal size="lg" ria-labelledby="contained-modal-title-vcenter" centered show={this.props.show} 
-      onHide={this.handleclose}>
+              <Modal size="lg" ria-labelledby="contained-modal-title-vcenter"  show={this.props.show} 
+      onHide={this.handleclose} centered>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           {this.props.Selected.title}
