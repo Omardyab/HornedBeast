@@ -1,16 +1,45 @@
 import React from 'react';
 import Horned from './Horned';
 import CardGroup from 'react-bootstrap/CardGroup'
+import Form from 'react-bootstrap/Form'
+import Beastdata from './data.json';
 // import CardGroup from 'react-bootstrap/';
 class Main extends React.Component{
+  selectHorns=(event)=>{
+    // event.preventDefault();
+    let numHorns= event.target.value
+    let allHorns=Beastdata
+    let newHorns
+    if (numHorns){
+      newHorns=allHorns.filter((item)=>{
+        if(item.horns==numHorns){
+        return item; }
+        })
+    }
+    else {
+     newHorns=allHorns;  
+    }
+    this.props.update(newHorns);
+    //  console.log('this is number of horns ', this.selectHorns.Horns);
+   }
 render(){
  return(
+
   <div>
-  <CardGroup>                 
+      <Form>
+          <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Label>How Many Horns?</Form.Label>
+            <Form.Control as="select" custom name='HornsNum' onChange={this.selectHorns} style = {{width: '10rem'}} centerd>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3' >3</option>
+                        <option value='100'> 100</option>
+                        <option value=''>All</option>
+            </Form.Control>
+          </Form.Group>
+        </Form>
+        <CardGroup>
                  {this.props.Beasts.map(beast => {
-                   console.log('aaaa 1st ',beast.horns);
-                   if(this.props.Horns==='ALL')
-                   {
                     return (<Horned
                     imageUrl={beast.image_url}
                     title={beast.title}
@@ -21,28 +50,9 @@ render(){
                     />
                    
                     )
-                    
-                  }
-                  else if(this.props.Horns === beast.horns)
-                  {
-                    return (<Horned
-                      imageUrl={beast.image_url}
-                      title={beast.title}
-                      description={beast.description}
-                      keyword={beast.keyword}
-                      ShowModal={this.props.ShowModal}
-                      horns={beast.horns}
-                      />)
-
-                   }           
-                  // else if (this.props.Beasts.horns===Horns)
-                  // {
-                  //   return (<Horned 
-                  //     )
-                  // }
-
-                 })}  
-        </CardGroup>
+                 })
+                 }
+              </CardGroup>
          </div>
             
      
