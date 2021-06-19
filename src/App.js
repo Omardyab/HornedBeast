@@ -6,8 +6,6 @@ import Main from './componenet/Main';
 import Beastdata from './componenet/data.json';
 import SelectedBeasts from './componenet/SelectedBeasts';
 
-
-
 class App extends React.Component{
   constructor(props){
     super(props)
@@ -33,14 +31,12 @@ class App extends React.Component{
         show:true
       }) 
     } 
-
    CloseModal = () => {
     this.setState({ show: false });
    }
   update=(newHorn)=>{
 this.setState({
   Beastdata:newHorn
-
 })
   }
     render(){
