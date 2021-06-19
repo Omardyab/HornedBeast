@@ -4,7 +4,7 @@ import React from 'react';
 class Footer extends React.Component{
 render(){
     return(
-        <p>Copyright &copy; 2021 Omar D'yab</p>
+        <p>Copyright Reserved &copy; 2021 Omar D'yab</p>
   
       );
 }
